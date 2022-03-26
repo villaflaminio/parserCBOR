@@ -18,6 +18,8 @@ Types
 
 With the PeterO.Cbor library it is possible to generate and encode cbor files in a simple way:
 Encode
+//
+
 var cbor = CBORObject.NewMap()
                 .Add("item", "any string")
                 .Add("number", 42)
@@ -37,7 +39,19 @@ Console.WriteLine:
 
 A5636D6170A1666E756D626572182A646974656D6A616E7920737472696E6765617272617982F963CE6378797A65627974657343000102666E756D626572182A
 
-{"map":{"number":42},"item":"any string","array":[999,"xyz"],"bytes":"AAEC","number":42}
+{
+   "map":{
+      "number":42
+   },
+   "item":"any string",
+   "array":[
+      999,
+      "xyz"
+   ],
+   "bytes":"h""000102",
+   "number":42
+}
+
 Decode
 public static byte[] StringToByteArray(string hex)
         {
@@ -53,6 +67,18 @@ string jsonConverted = Cbor.ToJson(byteshw);
 Console.WriteLine(jsonConverted);
 Console.WriteLine:
 
-{"map":{"number":42},"item":"any string","array":[999,"xyz"],"bytes":h'000102',"number":42}
+{
+   "map":{
+      "number":42
+   },
+   "item":"any string",
+   "array":[
+      999,
+      "xyz"
+   ],
+   "bytes":"h""000102",
+   "number":42
+}
+
 Detail of types according to CBOR coding (RFC 7049)
 
