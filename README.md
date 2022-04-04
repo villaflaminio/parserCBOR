@@ -1,7 +1,7 @@
 # CBOR
 
 Created: March 17, 2022
-Created by: Anonymous
+Created by: flaminio villa
 Tags: c#
 
 Concise Binary Object Representation (**CBOR**) è un formato di serializzazione di dati binari liberamente basato su JSON.
